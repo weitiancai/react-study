@@ -8,13 +8,6 @@ function YourComponent() {
     fetchData();
   }, []);
 
-  axios({
-    method: "get",
-    url: "/meet-before/menu/select?title=xyz",
-  }).then((res) => {
-     console.log(res);
-  });
-
   const fetchData = async () => {
     try {
       const response = await axios.get('/meet-before/menu/select?title=xyz');  // 替换为你的后端接口路径
@@ -25,18 +18,30 @@ function YourComponent() {
   };
 
   return (
-    <div>
-      {data.map((item) => (
-        <div key={item.id}>
-          <p>Title: {item.title}</p>
-          <p>Size: {item.size}</p>
-          <p>Time: {item.time}</p>
-          <p>Path: {item.path}</p>
-          <p>Tag: {item.tag}</p>
-          <p>Fsize: {item.fsize}</p>
-        </div>
-      ))}
-    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Size</th>
+          <th>Time</th>
+          <th>Path</th>
+          <th>Tag</th>
+          <th>Fsize</th>
+        </tr>
+      </thead>
+      <tbody>
+        {data.map((item) => (
+          <tr key={item.id}>
+            <td>{item.title}</td>
+            <td>{item.size}</td>
+            <td>{item.time}</td>
+            <td>{item.path}</td>
+            <td>{item.tag}</td>
+            <td>{item.fsize}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
   );
 }
 
