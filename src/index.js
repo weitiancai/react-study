@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import MyToolBar from './Utils/others/button'
 import MyToolBar2 from './Utils/others/passHandler'
 import Messenger from './Utils/others/chatMessage'
+import PoeList from './Utils/List/PoeList'
 // error
 // import otherButton from './Utils/others/others';
 // fix
@@ -66,7 +67,8 @@ function Toolbar({oneParam, twoParam}){
 root.render(
   <React.StrictMode>
     <OtherButton>我是按钮，别给我消失了</OtherButton>
-    <App></App>
+    {/* <App></App> */}
+    <PoeList></PoeList>
     <HomePage></HomePage>
     <Toolbar
       oneParam={() => alert('Playing!')}
