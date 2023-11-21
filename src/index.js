@@ -15,7 +15,6 @@ import OtherButton from './Utils/others/others';
 // React.axios = myAxios
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-
 function Header(props){
   return <h1>{props.title}</h1>
 }
@@ -67,7 +66,7 @@ function Toolbar({oneParam, twoParam}){
 root.render(
   <React.StrictMode>
     <OtherButton>我是按钮，别给我消失了</OtherButton>
-    {/* <App></App> */}
+    <App></App> 
     <PoeList></PoeList>
     <HomePage></HomePage>
     <Toolbar
@@ -78,6 +77,7 @@ root.render(
     <MyToolBar2/>
     <Messenger></Messenger>
   </React.StrictMode>
+
 );
 
 
