@@ -11,6 +11,7 @@ import PoeList from './Utils/List/PoeList'
 // import otherButton from './Utils/others/others';
 // fix
 import OtherButton from './Utils/others/others';
+import ComplexList from './Utils/List/ComplexPageList';
 // import myAxios from './Utils/axios';
 // React.axios = myAxios
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -65,7 +66,7 @@ function Toolbar({oneParam, twoParam}){
 
 root.render(
   <React.StrictMode>
-    <OtherButton>我是按钮，别给我消失了</OtherButton>
+    {/* <OtherButton>我是按钮，别给我消失了</OtherButton>
     <App></App> 
     <PoeList></PoeList>
     <HomePage></HomePage>
@@ -75,7 +76,8 @@ root.render(
     />
     <MyToolBar></MyToolBar>
     <MyToolBar2/>
-    <Messenger></Messenger>
+    <Messenger></Messenger> */}
+    <ComplexList></ComplexList>
   </React.StrictMode>
 
 );
