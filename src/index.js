@@ -12,6 +12,8 @@ import PoeList from './Utils/List/PoeList'
 // fix
 import OtherButton from './Utils/others/others';
 import ComplexList from './Utils/List/ComplexPageList';
+
+import Test from './Utils/test'
 // import myAxios from './Utils/axios';
 // React.axios = myAxios
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -57,12 +59,17 @@ function Button({onClick,chilren}){
 
 function Toolbar({oneParam, twoParam}){
   return (
+    <>
     <div> 
       <Button onClick={oneParam}>one</Button>
       <Button onClick={twoParam}>two</Button>
     </div>
+    
+    </>
   )
 }
+
+
 
 root.render(
   <React.StrictMode>
@@ -77,7 +84,8 @@ root.render(
     <MyToolBar></MyToolBar>
     <MyToolBar2/>
     <Messenger></Messenger> */}
-    <ComplexList></ComplexList>
+    {/* <ComplexList></ComplexList> */}
+    <Test></Test>
   </React.StrictMode>
 
 );
